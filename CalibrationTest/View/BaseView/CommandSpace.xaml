@@ -1,0 +1,50 @@
+﻿<UserControl x:Class="CalibrationTest.View.BaseView.CommandSpace"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:view="clr-namespace:CalibrationTest.View"
+             xmlns:baseView="clr-namespace:CalibrationTest.View.BaseView"
+             xmlns:netView="clr-namespace:CalibrationTest.View.NetView"
+             xmlns:serialView="clr-namespace:CalibrationTest.View.SerialView"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d">
+
+    <GroupBox Header="功能区">
+
+        <StackPanel Margin="0,5">
+            <Button Name="SerialDebuggingAssistant"
+                    Margin="10,0"
+                    Height="30"
+                    Foreground="Black"
+                    BorderBrush="{x:Null}"
+                    Background="{x:Null}"
+                    Click="SerialDebuggingAssistant_OnClick">
+                <Button.ToolTip>
+                    <ToolTip Placement="Top"
+                             Content="屏蔽仪表相关功能，只使用串口通信功能" />
+                </Button.ToolTip>
+                <Button.Content>
+                    <TextBlock Text="1. 串口调试助手"
+                               TextDecorations="Underline"
+                               VerticalAlignment="Center" />
+                </Button.Content>
+            </Button>
+            <Button Margin="10,0" Height="30" Foreground="Black" BorderBrush="{x:Null}" Background="{x:Null}">
+                <Button.ToolTip>
+                    <ToolTip Placement="Top" Content="屏蔽仪表相关功能，只使用网络通信功能" />
+                </Button.ToolTip>
+                <Button.Content>
+                    <TextBlock Text="2. 网络调试助手" TextDecorations="Underline" VerticalAlignment="Center" />
+                </Button.Content>
+            </Button>
+            <Button Margin="10,0" Height="30" Foreground="Black" BorderBrush="{x:Null}" Background="{x:Null}">
+                <Button.ToolTip>
+                    <ToolTip Placement="Top" Content="从当前串口中寻找可用仪表，列举仪表信息" />
+                </Button.ToolTip>
+                <Button.Content>
+                    <TextBlock Text="3. 仪表解析功能" TextDecorations="Underline" VerticalAlignment="Center" />
+                </Button.Content>
+            </Button>
+        </StackPanel>
+    </GroupBox>
+</UserControl>

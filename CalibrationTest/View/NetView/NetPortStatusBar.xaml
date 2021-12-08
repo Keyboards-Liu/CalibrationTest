@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="CalibrationTest.View.NetView.NetPortStatusBar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:view="clr-namespace:CalibrationTest.View"
+             xmlns:baseView="clr-namespace:CalibrationTest.View.BaseView"
+             xmlns:netView="clr-namespace:CalibrationTest.View.NetView"
+             xmlns:serialView="clr-namespace:CalibrationTest.View.SerialView"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CalibrationTest.View.NetView"
+             mc:Ignorable="d" 
+             MinWidth="31">
+    <DockPanel>
+        <Label Content="服务器IP地址"/>
+        <TextBox Width="80" Height="24" x:Name="IPNameComboBox"/>
+        <Label Content="服务器端口号"/>
+        <TextBox Width="80" Height="24" x:Name="NetPortNumberComboBox"/>
+        <Label Content="通信协议"/>
+        <ComboBox Width="80" Height="24" x:Name="NetProtocolBox" SelectedIndex="0"/>
+        <Ellipse HorizontalAlignment="Center" Height="16" Stroke="White" Width="16" Name="serialPortStatusEllipse" Fill="Gray"/>
+        <ToggleButton Width="80" Height="24" x:Name="turnOnButton" Content="打开串口"/>
+    </DockPanel>
+</UserControl>

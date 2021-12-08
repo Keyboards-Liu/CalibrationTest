@@ -1,0 +1,45 @@
+﻿<Window x:Class="CalibrationTest.View.SerialView.SerialPortMessageBox"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:view="clr-namespace:CalibrationTest.View"
+        xmlns:baseView="clr-namespace:CalibrationTest.View.BaseView"
+        xmlns:netView="clr-namespace:CalibrationTest.View.NetView"
+        xmlns:serialView="clr-namespace:CalibrationTest.View.SerialView"
+        mc:Ignorable="d"
+        Title="串口设置"
+        Width="250" Height="250" ResizeMode="NoResize">
+    <Window.Resources>
+        <ResourceDictionary Source="SerialPortMessageBoxResource.xaml" />
+    </Window.Resources>
+    <Grid>
+        <StackPanel>
+            <DockPanel>
+                <ComboBox x:Name="PortNameComboBox" />
+                <Label Content="端口" />
+            </DockPanel>
+            <DockPanel>
+                <ComboBox x:Name="BaudRateComboBox" />
+                <Label Content="波特率" />
+            </DockPanel>
+            <DockPanel>
+                <ComboBox x:Name="ParityComboBox" />
+                <Label Content="校验位" />
+            </DockPanel>
+            <DockPanel>
+                <ComboBox x:Name="DataBitsComboBox" />
+                <Label Content="数据位" />
+            </DockPanel>
+            <DockPanel>
+                <ComboBox x:Name="StopBitsComboBox" />
+                <Label Content="停止位" />
+            </DockPanel>
+            <DockPanel>
+                <ToggleButton x:Name="TurnOnButton" Content="打开串口" />
+                <Ellipse x:Name="SerialPortStatusEllipse" />
+                <Label Content="串口状态" />
+            </DockPanel>
+        </StackPanel>
+    </Grid>
+</Window>

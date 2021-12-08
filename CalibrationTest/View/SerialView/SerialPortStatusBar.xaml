@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="CalibrationTest.View.SerialView.SerialPortStatusBar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:view="clr-namespace:CalibrationTest.View"
+             xmlns:baseView="clr-namespace:CalibrationTest.View.BaseView"
+             xmlns:netView="clr-namespace:CalibrationTest.View.NetView"
+             xmlns:serialView="clr-namespace:CalibrationTest.View.SerialView"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CalibrationTest.View.SerialView"
+             mc:Ignorable="d" 
+             MinWidth="31">
+    <UserControl.Resources>
+        <ResourceDictionary Source="SerialPortStatusBarResource.xaml"/>
+    </UserControl.Resources>
+    <DockPanel>
+        <Label Content="端口"/>
+        <ComboBox x:Name="PortNameComboBox"/>
+        <Label Content="波特率"/>
+        <ComboBox x:Name="BaudRateComboBox" />
+        <Label Content="校验位"/>
+        <ComboBox x:Name="ParityComboBox" />
+        <Label Content="数据位"/>
+        <ComboBox  x:Name="DataBitsComboBox" />
+        <Label Content="停止位"/>
+        <ComboBox x:Name="StopBitsComboBox" />
+        <Label Content="串口状态"/>
+        <Ellipse Name="SerialPortStatusEllipse"/>
+        <ToggleButton x:Name="TurnOnButton" Content="打开串口"/>
+    </DockPanel>
+</UserControl>

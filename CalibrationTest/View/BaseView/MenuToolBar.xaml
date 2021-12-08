@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="CalibrationTest.View.BaseView.MenuToolBar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:view="clr-namespace:CalibrationTest.View"
+             xmlns:baseView="clr-namespace:CalibrationTest.View.BaseView"
+             xmlns:netView="clr-namespace:CalibrationTest.View.NetView"
+             xmlns:serialView="clr-namespace:CalibrationTest.View.SerialView"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CalibrationTest.View.BaseView"
+             mc:Ignorable="d">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top" Background="White">
+            <MenuItem Width="50" Header="菜单▼">
+                <MenuItem Header="打开串口"/>
+                <MenuItem Header="搜索仪表"/>
+            </MenuItem>
+
+            <MenuItem Width="50" Header="设置▼">
+                <MenuItem Name="SerialPortSetting" Header="串口设置"/>
+                <MenuItem Name="NetPortSetting" Header="网口设置"/>
+                <MenuItem Name="SQLSetting"  Header="数据库设置"/>
+            </MenuItem>
+            <MenuItem Width="50" Header="关于"/>
+        </Menu>
+    </DockPanel>
+</UserControl>
